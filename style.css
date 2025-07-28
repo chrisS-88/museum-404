@@ -23,7 +23,7 @@ body {
 
 /* ------------ANIMATION FX------------- */
 
-@keyframes glitch-brief {
+@keyframes glitch-bg {
   0%,
   88%,
   100% {
@@ -51,7 +51,34 @@ body {
   background-image: url(./assets/bg.jpg);
   background-position: center;
   background-size: cover;
-  animation: glitch-brief 5s steps(1) infinite;
+  animation: glitch-bg 5s steps(1) infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(100%);
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.animate-scrolling {
+  display: inline-block;
+  animation: scrolling 18s linear infinite;
+}
+
+.scrolling-txt {
+  color: var(--red);
 }
 
 /* ------------ANIMATION FX------------- */
