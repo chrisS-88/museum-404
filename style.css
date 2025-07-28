@@ -4,6 +4,8 @@
   --black: #0a0a0a;
 }
 
+/* ------------UTILITY------------- */
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +22,8 @@ li {
 body {
   background-color: var(--black);
 }
+
+/* ------------UTILITY------------- */
 
 /* ------------ANIMATION FX------------- */
 
@@ -83,6 +87,8 @@ body {
 
 /* ------------ANIMATION FX------------- */
 
+/* ------------NAV------------- */
+
 nav a span,
 nav ul li span {
   color: var(--red);
@@ -91,3 +97,13 @@ nav ul li span {
 main .intro-wrapper h1 {
   color: var(--red);
 }
+
+/* ------------NAV------------- */
+
+/* ------------CONTACT------------- */
+
+.contact-wrapper h1 {
+  color: var(--red);
+}
+
+/* ------------CONTACT------------- */
