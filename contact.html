@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Museum 404</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-transparent fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-start pt-2 px-4">
+          <a class="navbar-brand text-white fs-2" href="./index.html">Museum <span>404</span> </a>
+          <ul>
+            <a href="./index.html" class="text-decoration-none"><li>>_ START.EXE</li></a>
+            <a href="./exhibits.html" class="text-decoration-none"><li>> ERROR_LOGS</li></a>
+            <li>> ARCHIVES <span>[LOCKED]</span></li>
+            <a href="#" class="text-decoration-none"><li>> REPORT_AN_ERROR</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="contact-wrapper vh-100 d-flex flex-column justify-content-center gap-3">
+      <h1 class="text-center fs-2">Report an Error</h1>
+      <form class="w-50 mx-auto">
+        <div class="mb-3">
+          <label for="name" class="form-label fs-5">_Alias</label>
+          <input type="text" class="form-control" placeholder="Real names not required" />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label fs-5">_Reply.Protocol</label>
+          <input type="email" class="form-control" placeholder="If you're brave enough" />
+        </div>
+        <div class="mb-3">
+          <label for="Message" class="form-label fs-5">_Malfunction.Log</label>
+          <textarea class="form-control" name="message" rows="5" placeholder="Describe the Anomaly..." required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        </div>
+        <button type="submit" class="btn btn-primary">>Log_Error</button>
+      </form>
+    </div>
+  </body>
+</html>
