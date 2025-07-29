@@ -16,8 +16,13 @@
   letter-spacing: 1.5px;
 }
 
+h1 {
+  color: var(--red);
+}
+
 a {
   position: relative;
+  text-decoration: none;
 }
 
 li {
@@ -85,6 +90,16 @@ body {
   }
 }
 
+@keyframes flicker {
+  0%,
+  100% {
+    transform: translateX(-20);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+}
+
 /* ------------ANIMATION FX------------- */
 
 /* ------------NAV------------- */
@@ -112,7 +127,7 @@ main .intro-wrapper h1 {
 
 .home-bg {
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -123,7 +138,7 @@ main .intro-wrapper h1 {
   background-image: url(./assets/bg.jpg);
   background-position: center;
   background-size: cover;
-  animation: glitch-bg 5s steps(1) infinite;
+  animation: glitch-bg 3s steps(14) infinite;
 }
 
 .animate-scrolling {
@@ -137,11 +152,66 @@ main .intro-wrapper h1 {
 
 /* ------------HOME------------- */
 
+/* ------------EXHIBITS------------- */
+
+.exhibits-bg {
+  position: absolute;
+  width: 200%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.4;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-color: #00ff990f;
+}
+
+.img-fixed {
+  height: 350px;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--green);
+}
+
+.card-img-top {
+  filter: grayscale(0.8) contrast(1.2);
+  transition: all 1.5s ease;
+}
+.card:hover .card-img-top {
+  filter: grayscale(0.3) brightness(1.1);
+  scale: 1.02;
+}
+
+/* ------------MODALS------------- */
+.museum-modal {
+  background: radial-gradient(ellipse at center, #262626 0%, #0f0f0f 100%);
+  text-shadow: 0 0 2px #222;
+}
+
+.void-modal {
+  background: radial-gradient(circle at center, #000 0%, #060015 80%);
+  font-family: "IBM Plex Mono", monospace;
+  color: #c0f5ff;
+}
+/* ------------MODALS------------- */
+
+/* ------------EXHIBITS------------- */
+
 /* ------------CONTACT------------- */
 
 .contact-bg {
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -169,10 +239,6 @@ main .intro-wrapper h1 {
   top: 0;
   left: 0;
   padding: 2px 0 0 6px;
-}
-
-.contact-wrapper h1 {
-  color: var(--red);
 }
 
 .contact-wrapper form input,

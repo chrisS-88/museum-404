@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Museum_404</title>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar bg-transparent">
+        <div class="container-fluid d-md-flex flex-column flex-md-row pt-2 px-md-4">
+          <a class="navbar-brand text-white text-uppercase fs-2" href="#">Museum_<span>404</span> </a>
+          <ul class="d-flex gap-3">
+            <a href="./index.html" class="text-decoration-none"><li>START.EXE</li></a>
+            <a href="#" class="text-decoration-none active"><li>ERROR_LOGS</li></a>
+            <a href="#" target="_blank" class="text-decoration-none"
+              ><li>ARCHIVES<span>[LOCKED]</span></li></a
+            >
+            <a href="./contact.html" class="text-decoration-none"><li>REPORT_AN_ERROR</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container py-5">
+        <h1 class="fs-2 text-uppercase text-center">Error Logs</h1>
+        <h2 class="fs-5 mb-4 text-center text-white">The Archive of Broken Paths</h2>
+        <div class="row g-4">
+          <!-- CARDS -->
+          <div class="col-md-6">
+            <a href="#">
+              <div class="card" data-bs-toggle="modal" data-bs-target="#museum-modal">
+                <img src="./assets/gallery.jpg" class="card-img-top img-fixed" alt="Surreal" />
+                <h4 class="card-title">/museum/obscura</h4>
+                <div class="card-body">
+                  <p class="card-text text-white">404 – A hall of vanished exhibits.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#">
+              <div class="card" data-bs-toggle="modal" data-bs-target="#void-modal">
+                <img src="./assets/nebula.jpg" class="card-img-top img-fixed" alt="Library" />
+                <h4 class="card-title">/void/cache</h4>
+                <div class="card-body">
+                  <p class="card-text text-white">404 – Data scattered like stars, unreachable, unresolved.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- CARDS -->
+          <!-- MODALS -->
+          <div class="modal fade" id="museum-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark text-white museum-modal">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title">/museum/obscura</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <p><em>“Echoes archived in static and dust.”</em></p>
+                  <p>
+                    Glass cases contain glitched images, flickering captions, and empty display labels. The room feels half-rendered, like
+                    it's still loading from 1997.
+                  </p>
+                  <p>
+                    Data fragments reconstructed: <code>img_404_final_v4.png</code>, <code>index.bak</code>, <code>thread_dump.xml</code>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="void-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-black text-white void-modal">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title">/void/cache</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    <em>“Retrieving…</em> <span class="dots">.</span><span class="dots">.</span><span class="dots">.</span>
+                    <em>connection lost.”</em>
+                  </p>
+                  <p>
+                    The archive spins infinitely, fragments drifting in zero gravity. Images collapse into code. The signal never completes.
+                  </p>
+                  <p class="text-muted">
+                    <small>Timeout code: <code>504_GATEWAY_TIMEOUT</code></small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODALS -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
