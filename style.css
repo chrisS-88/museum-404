@@ -1,8 +1,9 @@
 :root {
-  --green: #00ff99;
+  --green: #00d86c;
   --red: #ff0033;
-  --redhvr: #c2072c;
+  --green_hvr: #17fe92;
   --black: #0a0a0a;
+  --purple: #d63384;
 }
 
 /* ------------UTILITY------------- */
@@ -16,7 +17,8 @@
   letter-spacing: 1.5px;
 }
 
-h1 {
+h1,
+h2 {
   color: var(--red);
 }
 
@@ -34,8 +36,8 @@ body {
 }
 
 .btn {
-  background-color: var(--red);
-  color: white;
+  background-color: var(--green);
+  color: var(--black);
   font-size: 18px;
   position: relative;
   border: none;
@@ -43,8 +45,8 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  background-color: var(--redhvr);
-  color: white;
+  background-color: var(--green_hvr);
+  color: var(--black);
 }
 
 /* ------------UTILITY------------- */
@@ -53,16 +55,16 @@ body {
 
 @keyframes glitch-bg {
   0%,
-  88%,
+  20%,
   100% {
     background-position: 0 0;
   }
-  66%,
-  90% {
+  10%,
+  15% {
     background-position: 60% 60%;
   }
-  95% {
-    background-position: 0% 0%;
+  12% {
+    background-position: 30% 40%;
   }
 }
 
@@ -138,7 +140,7 @@ main .intro-wrapper h1 {
   background-image: url(./assets/bg.jpg);
   background-position: center;
   background-size: cover;
-  animation: glitch-bg 3s steps(14) infinite;
+  animation: glitch-bg 3s steps(2) infinite;
 }
 
 .animate-scrolling {
@@ -185,11 +187,10 @@ main .intro-wrapper h1 {
 
 .card-img-top {
   filter: grayscale(0.8) contrast(1.2);
-  transition: all 1.5s ease;
+  transition: filter 1.5s ease-in-out;
 }
 .card:hover .card-img-top {
-  filter: grayscale(0.3) brightness(1.1);
-  scale: 1.02;
+  filter: grayscale(0.3) brightness(1);
 }
 
 /* ------------MODALS------------- */
@@ -202,6 +203,10 @@ main .intro-wrapper h1 {
   background: radial-gradient(circle at center, #000 0%, #060015 80%);
   font-family: "IBM Plex Mono", monospace;
   color: #c0f5ff;
+}
+
+.dots {
+  animation: blink 1.2s infinite;
 }
 /* ------------MODALS------------- */
 
@@ -222,7 +227,7 @@ main .intro-wrapper h1 {
   background-image: url(./assets/contact_bg.jpg);
   background-position: center;
   background-size: cover;
-  animation: glitch-bg 3s steps(14) infinite;
+  animation: glitch-bg 3s steps(1) infinite;
 }
 
 .contact-wrapper {
