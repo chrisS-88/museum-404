@@ -1,6 +1,7 @@
 :root {
   --green: #00ff99;
   --red: #ff0033;
+  --redhvr: #c2072c;
   --black: #0a0a0a;
 }
 
@@ -15,12 +16,30 @@
   letter-spacing: 1.5px;
 }
 
+a {
+  position: relative;
+}
+
 li {
   list-style: none;
 }
 
 body {
   background-color: var(--black);
+}
+
+.btn {
+  background-color: var(--red);
+  color: white;
+  font-size: 18px;
+  position: relative;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--redhvr);
+  color: white;
 }
 
 /* ------------UTILITY------------- */
@@ -33,29 +52,13 @@ body {
   100% {
     background-position: 0 0;
   }
-  85%,
+  66%,
   90% {
-    background-position: -20% -20%;
+    background-position: 60% 60%;
   }
   95% {
-    background-position: 40% 40%;
+    background-position: 0% 0%;
   }
-}
-
-.glitch-bg {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  opacity: 0.4;
-  background-repeat: no-repeat;
-  background-image: url(./assets/bg.jpg);
-  background-position: center;
-  background-size: cover;
-  animation: glitch-bg 5s steps(1) infinite;
 }
 
 @keyframes scrolling {
@@ -76,13 +79,10 @@ body {
   }
 }
 
-.animate-scrolling {
-  display: inline-block;
-  animation: scrolling 18s linear infinite;
-}
-
-.scrolling-txt {
-  color: var(--red);
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ------------ANIMATION FX------------- */
@@ -98,12 +98,116 @@ main .intro-wrapper h1 {
   color: var(--red);
 }
 
+.active::before {
+  content: ">";
+  position: absolute;
+  left: -10px;
+  color: var(--red);
+  animation: blink 1s step-start infinite;
+}
+
 /* ------------NAV------------- */
+
+/* ------------HOME------------- */
+
+.home-bg {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-image: url(./assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  animation: glitch-bg 5s steps(1) infinite;
+}
+
+.animate-scrolling {
+  display: inline-block;
+  animation: scrolling 18s linear infinite;
+}
+
+.scrolling-txt {
+  color: var(--red);
+}
+
+/* ------------HOME------------- */
 
 /* ------------CONTACT------------- */
 
+.contact-bg {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-image: url(./assets/contact_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  animation: glitch-bg 3s steps(14) infinite;
+}
+
+.contact-wrapper {
+  background-color: #00ff990f;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px 1px #00ff9968;
+  border-radius: 3px;
+  position: relative;
+}
+
+.current-time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 0 0 6px;
+}
+
 .contact-wrapper h1 {
   color: var(--red);
+}
+
+.contact-wrapper form input,
+.contact-wrapper form textarea {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background-color: #0a0a0a5f;
+}
+
+.contact-wrapper form input:focus,
+.contact-wrapper form textarea:focus {
+  box-shadow: 0 0 4px 1px #00ff9968;
+  background-color: transparent;
+  color: white;
+}
+
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+input:focus + label:after,
+textarea:focus + label:after {
+  content: "_";
+  color: var(--red);
+  animation: blink 1s step-start infinite;
+}
+
+.form-check-input:checked {
+  background-color: #ff0033;
+  border: none;
+  border-radius: 0;
 }
 
 /* ------------CONTACT------------- */
