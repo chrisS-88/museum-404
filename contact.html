@@ -40,12 +40,12 @@
       <p class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
       <form name="contact" method="POST" data-netlify="true" class="mx-auto row w-75">
         <div class="mb-2 d-flex flex-column-reverse">
-          <input type="text" class="form-control" placeholder="Real names not required" />
+          <input name="name" type="text" class="form-control" placeholder="Real names not required" required />
           <label for="name" class="form-label fs-5 blink">Alias</label>
         </div>
 
         <div class="mb-2 d-flex flex-column-reverse">
-          <input type="email" class="form-control" placeholder="ghost@404.net" />
+          <input name="email" type="email" class="form-control" placeholder="ghost@404.net" required />
           <label for="email" class="form-label fs-5 blink">Reply.Protocol</label>
         </div>
         <div class="mb-2 d-flex flex-column-reverse">
@@ -54,10 +54,10 @@
         </div>
         <label for="checkbox" class="form-label fs-5">Inject a Fault</label>
         <div class="d-lg-flex justify-content-between">
-          <div class="mb-3 form-check"><input type="checkbox" class="form-check-input rounded-0" />Existential</div>
-          <div class="mb-3 form-check"><input type="checkbox" class="form-check-input rounded-0" />Visual Distortion</div>
-          <div class="mb-3 form-check"><input type="checkbox" class="form-check-input rounded-0" />Unauthorized Beauty</div>
-          <div class="mb-3 form-check"><input type="checkbox" class="form-check-input rounded-0" />Other</div>
+          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Existential</div>
+          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Visual Distortion</div>
+          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Unauthorized Beauty</div>
+          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Other</div>
         </div>
         <div class="submit-btn text-center mt-3">
           <button type="submit" class="btn px-5">>Log_Error</button>
