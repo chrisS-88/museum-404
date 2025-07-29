@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Museum_404</title>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar bg-transparent">
+        <div class="container-fluid d-md-flex flex-column flex-md-row pt-2 px-md-4">
+          <a class="navbar-brand text-white text-uppercase fs-2" href="#">Museum_<span>404</span> </a>
+          <ul class="d-flex gap-3">
+            <a href="./index.html" class="text-decoration-none"><li>START.EXE</li></a>
+            <a href="#" class="text-decoration-none active"><li>ERROR_LOGS</li></a>
+            <a href="locked" target="_blank" class="text-decoration-none"
+              ><li>ARCHIVES<span>[LOCKED]</span></li></a
+            >
+            <a href="./contact.html" class="text-decoration-none"><li>REPORT_AN_ERROR</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container py-5">
+        <h1 class="fs-2 text-uppercase text-center">Error Logs</h1>
+        <h2 class="fs-5 mb-4 text-center text-white">The Archive of Broken Paths</h2>
+        <div class="row g-4">
+          <!-- CARDS -->
+          <div class="col-md-6">
+            <a href="#">
+              <div class="card" data-bs-toggle="modal" data-bs-target="#museum-modal">
+                <img src="./assets/gallery.jpg" class="card-img-top img-fixed" alt="Surreal" />
+                <h4 class="card-title">/museum/obscura</h4>
+                <div class="card-body">
+                  <p class="card-text text-white">404 – A hall of vanished exhibits.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#">
+              <div class="card" data-bs-toggle="modal" data-bs-target="#void-modal">
+                <img src="./assets/nebula.jpg" class="card-img-top img-fixed" alt="Library" />
+                <h4 class="card-title">/void/cache</h4>
+                <div class="card-body">
+                  <p class="card-text text-white">404 – Data scattered like stars, unreachable, unresolved.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- CARDS -->
+          <!-- MODALS -->
+          <div class="modal fade" id="museum-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark text-white museum-modal">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title">/museum/obscura</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 420px; opacity: 0.2">
+                    <!-- Exhibit rooms (rects) -->
+                    <g fill="none" stroke="#bbb" stroke-width="1">
+                      <rect x="20" y="20" width="60" height="40" />
+                      <rect x="100" y="20" width="50" height="30" />
+                      <rect x="170" y="20" width="50" height="40" />
+                      <rect x="20" y="80" width="70" height="50" />
+                      <rect x="110" y="90" width="100" height="30" />
+                    </g>
+
+                    <!-- Broken connectors -->
+                    <g stroke="#888" stroke-width="1" stroke-dasharray="4 2">
+                      <line x1="80" y1="40" x2="100" y2="35" />
+                      <line x1="150" y1="35" x2="170" y2="40" />
+                      <line x1="60" y1="70" x2="60" y2="80" />
+                      <line x1="150" y1="50" x2="150" y2="90" />
+                    </g>
+
+                    <!-- Room markers -->
+                    <g fill="#ccc">
+                      <circle cx="50" cy="40" r="3" />
+                      <circle cx="125" cy="35" r="3" />
+                      <circle cx="195" cy="40" r="3" />
+                      <circle cx="60" cy="105" r="3" />
+                      <circle cx="160" cy="105" r="3" />
+                    </g>
+
+                    <!-- Missing labels (ghost text) -->
+                    <g fill="#aaa" font-family="monospace" font-size="6" opacity="0.3">
+                      <text x="25" y="35">exhibit_01</text>
+                      <text x="105" y="32">exhibit_02</text>
+                      <text x="175" y="35">exhibit_03</text>
+                      <text x="25" y="95">exhibit_04</text>
+                      <text x="115" y="105">exhibit_05</text>
+                    </g>
+
+                    <!-- Broken text X's -->
+                    <g stroke="#ff3333" stroke-width="0.8" opacity="0.4">
+                      <line x1="102" y1="30" x2="108" y2="36" />
+                      <line x1="108" y1="30" x2="102" y2="36" />
+                      <line x1="113" y1="102" x2="117" y2="108" />
+                      <line x1="117" y1="102" x2="113" y2="108" />
+                    </g>
+                  </svg>
+
+                  <p><em>“Echoes archived in static and dust.”</em></p>
+                  <p>
+                    Glass cases contain glitched images, flickering captions, and empty display labels. The room feels half-rendered, like
+                    it's still loading from 1997.
+                  </p>
+                  <p>
+                    Data fragments reconstructed: <code>img_404_final_v4.png</code>, <code>index.bak</code>, <code>thread_dump.xml</code>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="void-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-black text-white void-modal">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title">/void/cache</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 400px; opacity: 0.3">
+                    <!-- Faint grid background -->
+                    <g stroke="#444" stroke-width="0.3">
+                      <line x1="0" y1="20" x2="200" y2="20" />
+                      <line x1="0" y1="60" x2="200" y2="60" />
+                      <line x1="0" y1="100" x2="200" y2="100" />
+                      <line x1="40" y1="0" x2="40" y2="120" />
+                      <line x1="100" y1="0" x2="100" y2="120" />
+                      <line x1="160" y1="0" x2="160" y2="120" />
+                    </g>
+
+                    <!-- Broken lines (connections) -->
+                    <g stroke="#00ffff" stroke-width="1.5" stroke-dasharray="5 3">
+                      <line x1="20" y1="20" x2="80" y2="60" />
+                      <line x1="80" y1="60" x2="120" y2="40" />
+                      <line x1="120" y1="40" x2="180" y2="100" />
+                    </g>
+
+                    <!-- Broken nodes -->
+                    <g fill="#00ffff">
+                      <circle cx="20" cy="20" r="3" />
+                      <circle cx="80" cy="60" r="3" />
+                      <circle cx="120" cy="40" r="3" />
+                      <circle cx="180" cy="100" r="3" />
+                    </g>
+
+                    <!-- X's over "lost" connections -->
+                    <g stroke="#ff0055" stroke-width="1">
+                      <line x1="77" y1="57" x2="83" y2="63" />
+                      <line x1="83" y1="57" x2="77" y2="63" />
+                      <line x1="117" y1="37" x2="123" y2="43" />
+                      <line x1="123" y1="37" x2="117" y2="43" />
+                    </g>
+                  </svg>
+
+                  <p>
+                    <em>“Retrieving…</em> <span class="dots">...</span>
+                    <em>connection lost.”</em>
+                  </p>
+                  <p>
+                    The archive spins infinitely, fragments drifting in zero gravity. Images collapse into code. The signal never completes.
+                  </p>
+                  <p class="text-muted">
+                    <small>Timeout code: <code>504_GATEWAY_TIMEOUT</code></small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODALS -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
