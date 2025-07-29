@@ -34,7 +34,7 @@
       </nav>
     </header>
     <div class="container contact-wrapper h-100 d-flex flex-column justify-content-center align-items-center gap-3 mt-5">
-      <div class="current-time" id="current-time">hehehdggshhsggsgs</div>
+      <div class="current-time" id="current-time"></div>
 
       <h1 class="text-center fs-2 text-uppercase mb-0">Report an Error</h1>
       <p class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
@@ -54,10 +54,16 @@
         </div>
         <label for="checkbox" class="form-label fs-5">Inject a Fault</label>
         <div class="d-lg-flex justify-content-between">
-          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Existential</div>
-          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Visual Distortion</div>
-          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Unauthorized Beauty</div>
-          <div class="mb-3 form-check"><input name="faults" type="checkbox" class="form-check-input rounded-0" />Other</div>
+          <div class="mb-3 form-check">
+            <input name="faults" type="checkbox" value="Existential" class="form-check-input rounded-0" />Existential
+          </div>
+          <div class="mb-3 form-check">
+            <input name="faults" type="checkbox" value="Visual Distortion" class="form-check-input rounded-0" />Visual Distortion
+          </div>
+          <div class="mb-3 form-check">
+            <input name="faults" type="checkbox" value="Unauthorized Beauty" class="form-check-input rounded-0" />Unauthorized Beauty
+          </div>
+          <div class="mb-3 form-check"><input name="faults" type="checkbox" value="Other" class="form-check-input rounded-0" />Other</div>
         </div>
         <div class="submit-btn text-center mt-3">
           <button type="submit" class="btn px-5">>Log_Error</button>
