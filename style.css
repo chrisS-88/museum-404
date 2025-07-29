@@ -179,13 +179,14 @@ main .intro-wrapper h1 {
 .contact-wrapper form textarea {
   background-color: transparent;
   color: white;
-  border: none;
+  border: 0.5px solid #00ff9937;
   border-radius: 3px;
   background-color: #0a0a0a5f;
 }
 
 .contact-wrapper form input:focus,
 .contact-wrapper form textarea:focus {
+  border: none;
   box-shadow: 0 0 4px 1px #00ff9968;
   background-color: transparent;
   color: white;
