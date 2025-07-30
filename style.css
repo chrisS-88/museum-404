@@ -39,7 +39,7 @@ body {
 }
 
 .btn {
-  background-color: var(--black);
+  background-color: transparent;
   border: 1px solid var(--green);
   color: var(--green);
   font-size: 18px;
@@ -50,6 +50,10 @@ body {
   cursor: pointer;
   background-color: var(--green);
   color: var(--red);
+}
+
+.locked {
+  animation: blinkerOut 1.5s ease-in infinite;
 }
 
 /* ------------UTILITY------------- */
@@ -68,6 +72,48 @@ body {
   }
   12% {
     background-position: 30% 40%;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: skew(-5deg);
+  }
+  40% {
+    transform: skew(5deg);
+  }
+  60% {
+    transform: skew(-5deg);
+  }
+  80% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes rumble {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-0.5px, 0.5px);
+  }
+  40% {
+    transform: translate(0.5px, -0.5px);
+  }
+  60% {
+    transform: translate(-0.4px, 0.3px);
+  }
+  80% {
+    transform: translate(0.3px, -0.4px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 
@@ -91,6 +137,48 @@ body {
 
 @keyframes blink {
   50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkish {
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes blinkerOut {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -140,10 +228,14 @@ main .intro-wrapper h1 {
   z-index: -1;
   opacity: 0.3;
   background-repeat: no-repeat;
-  background-image: url(./assets/bg.jpg);
+  background-image: url(./assets/contact_bg.jpg);
   background-position: center;
   background-size: cover;
   animation: glitch-bg 3s steps(2) infinite;
+}
+
+.intro-wrapper h1 {
+  animation: glitch 1s infinite;
 }
 
 .animate-scrolling {
@@ -160,17 +252,12 @@ main .intro-wrapper h1 {
 /* ------------EXHIBITS------------- */
 
 .exhibits-bg {
-  position: absolute;
-  width: 200%;
-  height: auto;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.4;
-  background-repeat: no-repeat;
+  background: radial-gradient(circle at center, #021400 0%, #0c0c0c 80%);
 }
 
 .card {
   background-color: #272727;
+  animation: rumble 1s infinite;
 }
 
 .img-fixed {
@@ -226,19 +313,7 @@ main .intro-wrapper h1 {
 /* ------------CONTACT------------- */
 
 .contact-bg {
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  opacity: 0.3;
-  background-repeat: no-repeat;
-  background-image: url(./assets/contact_bg.jpg);
-  background-position: center;
-  background-size: cover;
-  animation: glitch-bg 3s steps(1) infinite;
+  background: radial-gradient(ellipse at center, #262626 0%, #0f0f0f 100%);
 }
 
 .contact-wrapper {
@@ -250,6 +325,7 @@ main .intro-wrapper h1 {
   position: relative;
   width: 90%;
   max-width: 800px;
+  animation: blinkish 2s infinite;
 }
 
 .current-time {
