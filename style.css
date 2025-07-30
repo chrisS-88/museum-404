@@ -52,10 +52,6 @@ body {
   color: var(--red);
 }
 
-.locked {
-  animation: blinkerOut 1.5s ease-in infinite;
-}
-
 /* ------------UTILITY------------- */
 
 /* ------------ANIMATION FX------------- */
@@ -214,6 +210,10 @@ main .intro-wrapper h1 {
   animation: blink 1s step-start infinite;
 }
 
+.locked {
+  animation: blinkerOut 2.3s ease-in infinite;
+}
+
 /* ------------NAV------------- */
 
 /* ------------HOME------------- */
@@ -234,7 +234,7 @@ main .intro-wrapper h1 {
   animation: glitch-bg 3s steps(2) infinite;
 }
 
-.intro-wrapper h1 {
+.flicker {
   animation: glitch 1s infinite;
 }
 

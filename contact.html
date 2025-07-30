@@ -37,8 +37,8 @@
     <div class="container contact-wrapper d-flex flex-column justify-content-center align-items-center gap-3">
       <div class="current-time" id="current-time"></div>
 
-      <h1 class="text-center fs-2 text-uppercase mb-0 mt-3 mt-md-2">Report an Error</h1>
-      <p class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
+      <h1 class="text-center fs-2 text-uppercase mb-0 mt-3 mt-md-2 flicker">Report an Error</h1>
+      <p id="shuffle-contact" class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
       <form name="contact" method="POST" data-netlify="true" class="mx-auto row w-100">
         <div class="mb-2 d-flex flex-column-reverse">
           <input name="name" type="text" class="form-control" placeholder="Real names not required" required />
@@ -67,7 +67,7 @@
           <div class="mb-3 form-check"><input name="faults" type="checkbox" value="Other" class="form-check-input rounded-0" />Other</div>
         </div>
         <div class="submit-btn text-center mt-3">
-          <button type="submit" class="btn px-5">>Log_Error</button>
+          <button id="form-submit" type="submit" class="btn px-5">>Log_Error</button>
         </div>
       </form>
     </div>
