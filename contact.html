@@ -20,9 +20,9 @@
     <div class="contact-bg"></div>
     <header>
       <nav class="navbar bg-transparent">
-        <div class="container-fluid d-flex justify-content-between align-items-start pt-2 px-md-4">
+        <div class="container-fluid d-md-flex align-items-start flex-md-row pt-2 px-4 px-md-4">
           <a class="navbar-brand text-white text-uppercase fs-2" href="./index.html">Museum_<span>404</span> </a>
-          <ul class="d-flex gap-3">
+          <ul class="d-flex flex-column flex-md-row gap-md-3">
             <a href="./index.html" class="text-decoration-none"><li>START.EXE</li></a>
             <a href="./exhibits.html" class="text-decoration-none"><li>ERROR_LOGS</li></a>
             <a href="locked" target="_blank" class="text-decoration-none"
@@ -33,12 +33,13 @@
         </div>
       </nav>
     </header>
-    <div class="container contact-wrapper h-100 d-flex flex-column justify-content-center align-items-center gap-3 mt-5">
+
+    <div class="container contact-wrapper d-flex flex-column justify-content-center align-items-center gap-3">
       <div class="current-time" id="current-time"></div>
 
       <h1 class="text-center fs-2 text-uppercase mb-0 mt-3 mt-md-2">Report an Error</h1>
       <p class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
-      <form name="contact" method="POST" data-netlify="true" class="mx-auto row w-75">
+      <form name="contact" method="POST" data-netlify="true" class="mx-auto row w-100">
         <div class="mb-2 d-flex flex-column-reverse">
           <input name="name" type="text" class="form-control" placeholder="Real names not required" required />
           <label for="name" class="form-label fs-5 blink">Alias</label>

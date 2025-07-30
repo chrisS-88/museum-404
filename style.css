@@ -1,9 +1,8 @@
 :root {
-  --green: #00d86c;
-  --red: #ff0033;
-  --green_hvr: #17fe92;
+  --green: #00ff80bb;
+  --red: #ff0033e3;
+  --green_hvr: #00ff80;
   --black: #0a0a0a;
-  --purple: #d63384;
 }
 
 /* ------------UTILITY------------- */
@@ -27,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+a li:hover {
+  color: var(--green_hvr);
+}
+
 li {
   list-style: none;
 }
@@ -36,17 +39,17 @@ body {
 }
 
 .btn {
-  background-color: var(--green);
-  color: var(--black);
+  background-color: var(--black);
+  border: 1px solid var(--green);
+  color: var(--green);
   font-size: 18px;
   position: relative;
-  border: none;
 }
 
 .btn:hover {
   cursor: pointer;
-  background-color: var(--green_hvr);
-  color: var(--black);
+  background-color: var(--green);
+  color: var(--red);
 }
 
 /* ------------UTILITY------------- */
@@ -133,7 +136,7 @@ main .intro-wrapper h1 {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
   opacity: 0.3;
   background-repeat: no-repeat;
@@ -167,7 +170,7 @@ main .intro-wrapper h1 {
 }
 
 .card {
-  background-color: #00ff990f;
+  background-color: #272727;
 }
 
 .img-fixed {
@@ -179,10 +182,14 @@ main .intro-wrapper h1 {
 
 .card-title {
   position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
   color: var(--green);
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.314);
+  border-radius: 5px;
+  margin-top: 0.5rem;
 }
 
 .card-img-top {
@@ -191,6 +198,10 @@ main .intro-wrapper h1 {
 }
 .card:hover .card-img-top {
   filter: grayscale(0.3) brightness(1);
+}
+
+.card .card-body {
+  min-height: 80px;
 }
 
 /* ------------MODALS------------- */
@@ -233,10 +244,12 @@ main .intro-wrapper h1 {
 .contact-wrapper {
   background-color: #00ff990f;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 3rem auto 10rem auto;
   box-shadow: 0 0 4px 1px #00ff9968;
   border-radius: 3px;
   position: relative;
+  width: 90%;
+  max-width: 800px;
 }
 
 .current-time {
