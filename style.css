@@ -44,12 +44,15 @@ body {
   color: var(--green);
   font-size: 18px;
   position: relative;
+  animation: blinkerOut 0.7s infinite;
+  transition: all 1s;
 }
 
 .btn:hover {
   cursor: pointer;
-  background-color: var(--green);
-  color: var(--red);
+  border: 1px solid var(--green);
+  color: var(--green);
+  animation: none;
 }
 
 /* ------------UTILITY------------- */
@@ -91,26 +94,27 @@ body {
     transform: none;
   }
 }
+.skew {
+  animation: glitch 4s infinite;
+}
 
 @keyframes rumble {
-  0% {
-    transform: translate(0px, 0px);
+  0%,
+  100% {
+    transform: translate(0);
   }
-  20% {
+  25% {
     transform: translate(-0.5px, 0.5px);
   }
-  40% {
+  50% {
     transform: translate(0.5px, -0.5px);
   }
-  60% {
-    transform: translate(-0.4px, 0.3px);
+  75% {
+    transform: translate(-0.5px, -0.5px);
   }
-  80% {
-    transform: translate(0.3px, -0.4px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
+}
+.rumble {
+  animation: rumble 1s infinite;
 }
 
 @keyframes scrolling {
@@ -135,6 +139,9 @@ body {
   50% {
     opacity: 0;
   }
+}
+.blink {
+  animation: blink 1.2s infinite;
 }
 
 @keyframes blinkish {
@@ -178,15 +185,36 @@ body {
     opacity: 0;
   }
 }
-
-@keyframes flicker {
-  0%,
-  100% {
-    transform: translateX(-20);
+.lights-out {
+  animation: blinkerOut 2.3s ease-in infinite;
+}
+@keyframes tearText {
+  0% {
+    transform: translateY(0) skewX(0deg);
+    opacity: 1;
+    letter-spacing: normal;
+  }
+  30% {
+    transform: translateY(-2px) skewX(-5deg);
+    letter-spacing: 1px;
   }
   50% {
-    transform: translateX(40px);
+    transform: translateY(2px) skewX(5deg);
+    opacity: 0.8;
   }
+  70% {
+    transform: translateY(-2px) skewX(-3deg);
+    letter-spacing: 2px;
+  }
+  100% {
+    transform: translateY(0) skewX(0deg);
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+.tear {
+  animation: tearText 3s ease-in-out infinite;
 }
 
 /* ------------ANIMATION FX------------- */
@@ -210,10 +238,6 @@ main .intro-wrapper h1 {
   animation: blink 1s step-start infinite;
 }
 
-.locked {
-  animation: blinkerOut 2.3s ease-in infinite;
-}
-
 /* ------------NAV------------- */
 
 /* ------------HOME------------- */
@@ -232,10 +256,6 @@ main .intro-wrapper h1 {
   background-position: center;
   background-size: cover;
   animation: glitch-bg 3s steps(2) infinite;
-}
-
-.flicker {
-  animation: glitch 1s infinite;
 }
 
 .animate-scrolling {
@@ -303,9 +323,6 @@ main .intro-wrapper h1 {
   color: #c0f5ff;
 }
 
-.dots {
-  animation: blink 1.2s infinite;
-}
 /* ------------MODALS------------- */
 
 /* ------------EXHIBITS------------- */

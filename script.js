@@ -1,21 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   const updateTime = () => {
+    const timeEl = document.getElementById("current-time");
+    if (!timeEl) {
+      return;
+    }
+
     const now = new Date();
     const time = now.toLocaleTimeString();
     const date = now.toDateString();
-    document.getElementById("current-time").textContent = `_>${date}-${time}`;
+    timeEl.textContent = `_>${date}-${time}`;
+    // document.getElementById("current-time").textContent = `_>${date}-${time}`;
   };
+  updateTime();
   setInterval(updateTime, 1000);
 
   const glitchedText = (elId) => {
     const element = document.getElementById(elId);
+    if (!element) {
+      return;
+    }
 
     const originalText = element.textContent;
     console.log(originalText);
 
     const settings = {
-      duration: 700,
-      interval: 50,
+      duration: 600,
+      interval: 70,
       glitchChance: 0.3,
       chars: "@#$%&*_-+=<>?/dhskeuex£",
     };
@@ -55,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  glitchedText("nav-shuffle");
   glitchedText("shuffle-home");
   glitchedText("shuffle-exhibits");
   glitchedText("shuffle-contact");

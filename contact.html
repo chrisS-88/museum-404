@@ -38,16 +38,16 @@
       <div class="current-time" id="current-time"></div>
 
       <h1 class="text-center fs-2 text-uppercase mb-0 mt-3 mt-md-2 flicker">Report an Error</h1>
-      <p id="shuffle-contact" class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
+      <p class="text-center text-white fs-5">Did the internet glitch? Submit your findings to the archive.</p>
       <form name="contact" method="POST" data-netlify="true" class="mx-auto row w-100">
         <div class="mb-2 d-flex flex-column-reverse">
           <input name="name" type="text" class="form-control" placeholder="Real names not required" required />
-          <label for="name" class="form-label fs-5 blink">Alias</label>
+          <label for="name" class="form-label fs-5">Alias</label>
         </div>
 
         <div class="mb-2 d-flex flex-column-reverse">
           <input name="email" type="email" class="form-control" placeholder="ghost@404.net" required />
-          <label for="email" class="form-label fs-5 blink">Reply.Protocol</label>
+          <label id="shuffle-contact" for="email" class="form-label fs-5">Reply.Protocol</label>
         </div>
         <div class="mb-2 d-flex flex-column-reverse">
           <textarea class="form-control" name="message" rows="5" placeholder="Describe the Anomaly..." required></textarea>
