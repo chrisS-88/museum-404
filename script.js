@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const date = now.toDateString();
     document.getElementById("current-time").textContent = `_>${date}-${time}`;
   };
-  updateTime();
+  setInterval(updateTime, 1000);
 
   const glitchedText = (elId) => {
     const element = document.getElementById(elId);
@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       glitchEffect();
     });
   };
-  setInterval(updateTime, 1000);
 
   glitchedText("shuffle-home");
   glitchedText("shuffle-exhibits");
